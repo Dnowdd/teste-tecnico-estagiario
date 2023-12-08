@@ -1,4 +1,20 @@
+'use client';
+import React, {useState, useEffect} from 'react';
+
 export default function Questao2() {
+  const [contador, setContador] = useState(0);
+  useEffect(() => {
+    setContador(10);
+  }, []);
+
+  const incrementarContador = () => {
+    setContador(contador + 1);
+  };
+
+  const decrementarContador = () => {
+    setContador(contador - 1);
+  };
+
   return (
     <>
       <h1>Questão 2</h1>
@@ -9,6 +25,12 @@ export default function Questao2() {
         lógica para atualizar o contador quando a tela for carregada e a lógica
         para atualizar o contador quando os botões forem clicados.
       </p>
+      <div className='contador'>
+        <h1>Contador:</h1>
+        <div className="contadorNum">{contador}</div>
+        <button onClick={incrementarContador} className="buttonContador incrementar">Incrementar</button>
+        <button onClick={decrementarContador} className="buttonContador">Decrementar</button>
+      </div>
     </>
   );
 }
