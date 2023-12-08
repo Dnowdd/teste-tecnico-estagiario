@@ -47,5 +47,5 @@ exibir seu nome e preço.
 
 #### Imagem
 
-![App Screenshot](./04/imagem4.gif)
+![App Screenshot](./prints/imagem4.gif)
 
